@@ -1,7 +1,9 @@
 给设备安装uiautomator2
-    ·python -m uiautomator2 init
+    ·python3 -m uiautomator2 init
+    ·pip3 install uiautomator2 -i https://pypi.douban.com/simple
 获取手机元素
-    ·python -m weditor
+    ·python3 -m pip install weditor
+    ·python3 -m weditor
 获取app的包名
     ·打开想要获取包名的app，在控制台输入以下命令
     ·adb shell dumpsys window | findstr mCurrentFocus
