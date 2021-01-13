@@ -45,3 +45,13 @@ uv 代表用户
 
 adb shell monkey -p com.geek.weathergj365 -v -v -v  10000
 
+mac环境下 查看包名：
+查看包名 adb shell dumpsys window w |grep \/ |grep name=
+
+adb shell monkey -p com.bingtian.reader -v -v -v  1000000 >/Users/naoli/Desktop/log.txt
+adb shell monkey -p com.bingtian.sweetweather -v -v -v  1000000 >/Users/naoli/Desktop/log.txt
+adb shell monkey -s 1000 -p com.bingtian.sweetweather --pct-touch 20 --pct-motion 20 --pct-nav 20 --pct-majornav 20 --pct-syskeys 0 --ignore-crashes --ignore-timeouts --ignore-security-exceptions --ignore-native-crashes --monitor-native-crashes --throttle 300  -v -v -v 36000 > /Users/naoli/Desktop/log.txt
+
+mac环境下杀掉monkey进程
+adb shell ps | grep monkey 查看monkey进程
+adb shell kill 17390 杀掉进程
